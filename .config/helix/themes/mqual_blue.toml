@@ -1,0 +1,95 @@
+# A port of the "blue" Vim colorscheme for Helix.
+# Original author: Steven Vertigan <steven@vertigan.wattle.id.au>
+#
+# To use this theme, save it as mqual_blue.toml in your Helix themes directory.
+# Then, add `theme = "mqual_blue"` to your config.toml file.
+
+# inherits = "default"
+
+# Global UI and Editor
+"ui.background" = { bg = "#000087" }
+"ui.text" = { fg = "#ffd700" }
+"ui.cursor" = { fg = "#000000", bg = "#00ff00" }
+"ui.cursor.normal" = { bg = "#00ff00" }
+"ui.cursor.insert" = { bg = "#ffd700" }
+"ui.cursor.select" = { bg = "#ffffff" }
+"ui.cursor.match" = { bg = "#878700" }
+"ui.cursorline.primary" = { bg = "#005faf" }
+"ui.cursorcolumn.primary" = { bg = "#005faf" }
+"ui.gutter" = { fg = "#008787" }
+"ui.gutter.selected" = { bg = "#005faf" }
+"ui.linenr" = { fg = "#5fffff" }
+"ui.linenr.selected" = { fg = "#ffd700", bg = "#005faf", modifiers = ["bold"] }
+"ui.selection" = { fg = "#ffffff", bg = "#008787" }
+"ui.virtual.whitespace" = { fg = "#d787d7" }
+"ui.virtual.ruler" = { bg = "#870087" }
+"ui.virtual.inlay-hint" = { fg = "#5fffff", bg = "#000087", modifiers = ["italic"] }
+"ui.window" = { fg = "#008787" }
+"ui.help" = { fg = "#d787d7", bg = "#000087" }
+"ui.statusline" = { fg = "#000087", bg = "#5fffff" }
+"ui.statusline.inactive" = { fg = "#000087", bg = "#008787" }
+"ui.statusline.separator" = { fg = "#008787" }
+"ui.bufferline" = { bg = "#008787" }
+"ui.bufferline.active" = { fg = "#000087", bg = "#5fffff" }
+"ui.popup" = { fg = "#ffffff", bg = "#008787" }
+"ui.menu" = { fg = "#ffffff", bg = "#008787" }
+"ui.menu.selected" = { fg = "#008787", bg = "#ffffff" }
+"ui.menu.scroll" = { fg = "#ffffff", bg = "#000087" }
+
+# Syntax Highlighting
+"comment" = { fg = "#878787", modifiers = ["bold"] }
+"constant" = { fg = "#5fffff" }
+"constant.builtin" = { fg = "#5fffff" }
+"constant.character.escape" = { fg = "#d787d7" }
+"constant.numeric" = { fg = "#5fffff" }
+"variable" = { fg = "#bcbcbc" }
+"variable.builtin" = { fg = "#bcbcbc" }
+"variable.parameter" = { fg = "#bcbcbc" }
+"variable.other.member" = { fg = "#bcbcbc" }
+
+"type" = { fg = "#ffa500", modifiers = ["bold"] }
+"type.builtin" = { fg = "#ffa500", modifiers = ["bold"] }
+"storage" = { fg = "#ffa500", modifiers = ["bold"] }
+"storage.type" = { fg = "#ffa500", modifiers = ["bold"] }
+"keyword" = { fg = "#ffffff" }
+"keyword.control" = { fg = "#ffffff" }
+"keyword.function" = { fg = "#ffffff" }
+"keyword.operator" = { fg = "#ffffff" }
+"operator" = { fg = "#ffa500", modifiers = ["bold"] }
+"punctuation" = { fg = "#ffffff" }
+"string" = { fg = "#5fffff" }
+"string.regexp" = { fg = "#d787d7" }
+"string.special" = { fg = "#d787d7" }
+"function" = { fg = "#bcbcbc" }
+"function.method" = { fg = "#bcbcbc" }
+"function.macro" = { fg = "#00ff00" }
+"tag" = { fg = "#d787d7" }
+"label" = { fg = "#ffd700" }
+"namespace" = { fg = "#d787d7" }
+
+# Markup and Diagnostics
+"markup.heading" = { fg = "#d787d7" }
+"markup.bold" = { fg = "#ffd700", modifiers = ["bold"] }
+"markup.italic" = { fg = "#d787d7", modifiers = ["italic"] }
+"markup.strikethrough" = { fg = "#878787", modifiers = ["crossed_out"] }
+"markup.link" = { fg = "#5fffff", modifiers = ["underline"] }
+"markup.link.url" = { fg = "#d787d7", modifiers = ["underline"] }
+"markup.raw" = { fg = "#d787d7" }
+"markup.list" = { fg = "#5fffff" }
+"markup.quote" = { fg = "#008787", modifiers = ["italic"] }
+
+"diagnostic" = { fg = "#ffffff", bg = "#000087", modifiers = ["reversed"] }
+"diagnostic.error" = { fg = "#d70000", modifiers = ["bold"] }
+"diagnostic.warning" = { fg = "#d787d7" }
+"diagnostic.info" = { fg = "#00ff00" }
+"diagnostic.hint" = { fg = "#d787d7" }
+"error" = { fg = "#d70000" }
+"warning" = { fg = "#d787d7" }
+"info" = { fg = "#5c5cff" }
+"hint" = { fg = "#878787" }
+"tabstop" = { bg = "#ffd700" }
+
+# Diff
+"diff.plus" = { fg = "#ffffff", bg = "#5f875f" }
+"diff.minus" = { fg = "#ffffff", bg = "#af5faf" }
+"diff.delta" = { fg = "#000000", bg = "#c6c6c6" }

@@ -1,0 +1,9 @@
+[user]
+    name = Vishal
+    email = 95016059+gyanantaran@users.noreply.github.com
+[push]
+  default = simple
+[pull]
+  rebase = false
+[init]
+	defaultBranch = main

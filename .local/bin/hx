@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+helix_bin="/usr/bin/helix"
+echo "$(pwd)" >"$HOME/workingdir"; "$helix_bin" $@

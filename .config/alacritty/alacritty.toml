@@ -1,0 +1,20 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/mqual_blue.toml",
+]
+
+[font]
+size = 18
+
+[font.normal]
+family = "Iosevka Nerd Font"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 0
+y = 0
+
+[scrolling]
+history = 0 

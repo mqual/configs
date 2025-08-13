@@ -1,0 +1,85 @@
+[icons]
+icons = "awesome4"
+
+# [[block]]
+# block = "custom"
+# command = '''swaymsg -t get_inputs | jq -r '.[1].xkb_active_layout_name' | sed -E 's/.*programmer Dvorak.*/dvorak-p/; s/.*Workman-P.*/workman-p/; s/.*English \(US\).*/qwerty/' '''
+# interval = 1
+
+[[block]]
+block = "keyboard_layout"
+driver = "sway"
+format = " $layout "
+[block.mappings]
+"English (US)" = "qwerty"
+"English (Dvorak)" = "dvorak"
+"English (Workman)" = "EN"
+"German (neo2)" = "neo2"
+"Russian (N/A)" = "RU"
+
+[[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:15,rot_interval:0.5) |} "
+format_alt = " $icon $prev {$title.str(max_w:15,rot_interval:0.5) $play $next |} "
+
+[[block]]
+block = "net"
+format = " $icon {$signal_strength $ssid |Wired connection} $ip $speed_down.eng(prefix:K)^icon_net_down$speed_up.eng(prefix:K)^icon_net_up "
+[[block]]
+block = "custom"
+command = '''ping -c4 1.1.1.1 | grep "rtt" | cut -d '/' -f 5 | awk '{printf "%.2fms", $1}' '''
+interval = 60
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "disk_space"
+format = " $icon Turing: $available.eng(w:2) "
+
+[[block]]
+block = "nvidia_gpu"
+format = " $icon GPU:$utilization\\|$temperature "
+
+[[block]]
+block = "cpu"
+format = " $icon CPU: $utilization"
+[[block]]
+block = "temperature"
+format = "$max "
+
+[[block]]
+block = "memory"
+format = " $icon MEM: $mem_total_used_percents.eng(w:2) "
+
+[[block]]
+block = "load"
+format = " $icon Load: $1m.eng(w:4) "
+
+[[block]]
+block = "battery"
+format = " $icon BAT: $percentage "
+full_format = " $icon  "
+
+[[block]]
+block = "notify"
+format = " $icon {($notification_count.eng(w:1)) |} "
+driver = "swaync"
+[[block.click]]
+button = "left"
+action = "show"
+[[block.click]]
+button = "right"
+action = "toggle_paused"
+
+[[block]]
+block = "github"
+token = "****************************************"
+format = " $icon $total.eng(w:1) "
+info = ["total"]
+warning = ["mention","review_requested"]
+
+[[block]]
+block = "time"
+[block.format]
+full = " $timestamp.datetime(f:'%a: %Y-%m-%d %T', l:hi_IN)"
