@@ -1,4 +1,7 @@
 #!/usr/bin/bash
-ed_bin=ki
+ed_bin='ki'
 #echo $(pwd)
-echo "$(pwd)" >"$HOME/.cache/workingdir"; $ed_bin $@
+echo "$(pwd)" >"$HOME/.cache/workingdir"
+
+export KI_EDITOR_THEME="Github Light"
+$ed_bin $@

@@ -1,12 +1,13 @@
 [general]
 import = [
-  "~/.config/alacritty/themes/mqual_blue.toml",
+  "~/.config/alacritty/themes/github_light.toml",
 ]
 
 [font]
-size = 18
+size =  12
 
 [font.normal]
+# family = "JetBrainsMono Nerd Font"
 family = "Iosevka Nerd Font"
 
 [window]
@@ -16,5 +17,5 @@ decorations = "none"
 x = 0
 y = 0
 
-[scrolling]
-history = 0 
+# [scrolling]
+# history = 0 

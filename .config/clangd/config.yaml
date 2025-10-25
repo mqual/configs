@@ -1,6 +1,14 @@
+If:
+  PathMatch: .*\.c$
+CompileFlags:
+  Add: [-Wall, -Wextra, -Wshadow, -std=c23]
+
+---
+If:
+  PathMatch: .*\.cpp$
+CompileFlags:
+  Add: [-Wall, -Wextra, -Wshadow, -std=c++23]
 Diagnostics:
   ClangTidy:
     Add: [modernize*, readability*]
 
-CompileFlags:
-  Add: [-Wall, -Wextra, -Wshadow]

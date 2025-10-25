@@ -1,41 +1,28 @@
+[theme]
+#theme = "gruvbox-light"
+
 [icons]
 icons = "awesome4"
 
-# [[block]]
-# block = "custom"
-# command = '''swaymsg -t get_inputs | jq -r '.[1].xkb_active_layout_name' | sed -E 's/.*programmer Dvorak.*/dvorak-p/; s/.*Workman-P.*/workman-p/; s/.*English \(US\).*/qwerty/' '''
-# interval = 1
-
 [[block]]
-block = "keyboard_layout"
-driver = "sway"
-format = " $layout "
-[block.mappings]
-"English (US)" = "qwerty"
-"English (Dvorak)" = "dvorak"
-"English (Workman)" = "EN"
-"German (neo2)" = "neo2"
-"Russian (N/A)" = "RU"
+block = "custom"
+command = "waybar-lyric --quiet | head -n 1 | jq -r '.text'"
+interval = 0.3
+# Hide the block when there's no output
+hide_when_empty = true
 
 [[block]]
 block = "music"
-format = " $icon {$combo.str(max_w:15,rot_interval:0.5) |} "
-format_alt = " $icon $prev {$title.str(max_w:15,rot_interval:0.5) $play $next |} "
-
-[[block]]
-block = "net"
-format = " $icon {$signal_strength $ssid |Wired connection} $ip $speed_down.eng(prefix:K)^icon_net_down$speed_up.eng(prefix:K)^icon_net_up "
-[[block]]
-block = "custom"
-command = '''ping -c4 1.1.1.1 | grep "rtt" | cut -d '/' -f 5 | awk '{printf "%.2fms", $1}' '''
-interval = 60
+format = " $icon $prev {$artist.str(max_w:15) $play $next |} "
+format_alt = " $icon {$combo.str(max_w:15,rot_interval:0.5) |} "
 
 [[block]]
 block = "sound"
 
 [[block]]
-block = "disk_space"
-format = " $icon Turing: $available.eng(w:2) "
+block = "net"
+format = " $icon $speed_down.eng(prefix:K)^icon_net_down$speed_up.eng(prefix:K)^icon_net_up "
+format_alt = " $icon {$signal_strength $ssid |Wired connection} $ip "
 
 [[block]]
 block = "nvidia_gpu"
@@ -55,6 +42,10 @@ format = " $icon MEM: $mem_total_used_percents.eng(w:2) "
 [[block]]
 block = "load"
 format = " $icon Load: $1m.eng(w:4) "
+
+[[block]]
+block = "disk_space"
+format = " $icon Turing: $available.eng(w:2) "
 
 [[block]]
 block = "battery"
@@ -78,6 +69,17 @@ token = "****************************************"
 format = " $icon $total.eng(w:1) "
 info = ["total"]
 warning = ["mention","review_requested"]
+
+[[block]]
+block = "keyboard_layout"
+driver = "sway"
+format = " $layout "
+[block.mappings]
+"English (US)" = "qwerty"
+"English (Dvorak)" = "dvorak"
+"English (Workman)" = "EN"
+"German (neo2)" = "neo2"
+"Russian (N/A)" = "RU"
 
 [[block]]
 block = "time"

@@ -1,7 +1,8 @@
-theme = "mqual_blue"
+theme = "gruvbox"
 
 [editor]
-line-number = "relative"
+#line-number = "relative"
+cursorline = true
 
 [editor.whitespace.render]
 space = "all"
