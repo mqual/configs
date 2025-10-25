@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+ed_bin=ki
+#echo $(pwd)
+echo "$(pwd)" >"$HOME/.cache/workingdir"; $ed_bin $@

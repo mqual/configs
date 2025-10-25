@@ -1,0 +1,35 @@
+#!/bin/nu
+
+def todo_file [] {
+  mut todo_file: string = "todo.md"
+  let is_git: bool = (git rev-parse --is-inside-work-tree | complete | get exit_code | $in == 0)
+  
+  $todo_file = (if $is_git {
+    let git_root = git rev-parse --show-toplevel
+    $git_root
+  } else {
+    "~"
+  }) | path join $todo_file
+  
+  let is_exists_todo_file = $todo_file | path exists
+  if not $is_exists_todo_file {
+    [
+      "todo file does not exist"
+      (if $is_git {
+        " in git root"
+      } else {
+        $" at $todo_file"
+      })
+      " would you like to create it? (y/N)"
+    ] | str join | print
+    
+    let is_yes_confirmation: bool = (input listen | get code | $in == 'y')
+    print
+    if not $is_yes_confirmation {
+      $todo_file = "~/todo.md"
+    }
+  }
+  return $todo_file
+}
+let todo_file = todo_file | path expand
+^$env.EDITOR $"($todo_file)"
