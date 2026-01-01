@@ -1,5 +1,6 @@
 setenv EDITOR $HOME/.local/bin/ed
 setenv BROWSER /usr/bin/microsoft-edge-beta
+setenv KI_EDITOR_THEME "Github Dark"
 
 
 
@@ -39,6 +40,7 @@ direnv hook fish | source
 
 
 
+
 function fish_user_key_bindings
     # fish_vi_key_bindings
     bind \ck kill-line
@@ -51,7 +53,8 @@ if status --is-interactive
     abbr -a ed '$EDITOR'
 
     abbr -a la 'eza -la --group-directories-last'
-    abbr -a ls `eza -a1`
+    abbr -a ls 'eza -a1'
+	abbr -a rm 'trash'
 
     # note: need to move this to be in make files
     abbr -a gcc 'gcc -Wall -Wextra -Wshadow -std=c23 -O2 -o main'

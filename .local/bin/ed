@@ -1,7 +1,6 @@
 #!/usr/bin/bash
-ed_bin='ki'
+ed_bin="$HOME/.cargo/bin/ki"
 #echo $(pwd)
 echo "$(pwd)" >"$HOME/.cache/workingdir"
 
-export KI_EDITOR_THEME="Github Light"
 $ed_bin $@
