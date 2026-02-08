@@ -50,7 +50,7 @@ end
 if status --is-interactive
     alias wd 'cd (cat $HOME/.cache/workingdir)'
     abbr -a gd "cd (git rev-parse --show-toplevel)"
-    abbr -a ed '$EDITOR'
+    abbr -a ki '$EDITOR'
 
     abbr -a la 'eza -la --group-directories-last'
     abbr -a ls 'eza -a1'
@@ -71,7 +71,7 @@ if status --is-interactive
     set __fish_git_prompt_showstashstate ''
     set __fish_git_prompt_showupstream none
     set -g fish_prompt_pwd_dir_length 1
-    set __fish_git_prompt_shorten_branch_len 15
+    set __fish_git_prompt_shorten_branch_len 20
 
     #starship init fish | source
 

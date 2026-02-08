@@ -1,3 +1,131 @@
 {
-    "theme": "VS Code (Dark)"
+    "theme": "One Dark",
+    "leader_keymap": [
+        [
+            {
+                "name": "1",
+                "script": "1.sh"
+            },
+            {
+                "name": "2",
+                "script": "2.sh"
+            },
+            {
+                "name": "3",
+                "script": "3.sh"
+            },
+            {
+                "name": "4",
+                "script": "4.sh"
+            },
+            {
+                "name": "5",
+                "script": "5.sh"
+            },
+            {
+                "name": "6",
+                "script": "6.sh"
+            },
+            {
+                "name": "7",
+                "script": "7.sh"
+            },
+            {
+                "name": "8",
+                "script": "8.sh"
+            },
+            {
+                "name": "9",
+                "script": "9.sh"
+            },
+            {
+                "name": "10",
+                "script": "10.sh"
+            }
+        ],
+        [
+            {
+                "name": "11",
+                "script": "11.sh"
+            },
+            {
+                "name": "12",
+                "script": "12.sh"
+            },
+            {
+                "name": "13",
+                "script": "13.sh"
+            },
+            {
+                "name": "14",
+                "script": "14.sh"
+            },
+            {
+                "name": "15",
+                "script": "15.sh"
+            },
+            {
+                "name": "16",
+                "script": "16.sh"
+            },
+            {
+                "name": "17",
+                "script": "17.sh"
+            },
+            {
+                "name": "18",
+                "script": "18.sh"
+            },
+            {
+                "name": "19",
+                "script": "19.sh"
+            },
+            {
+                "name": "20",
+                "script": "20.sh"
+            }
+        ],
+        [
+            {
+                "name": "21",
+                "script": "21.sh"
+            },
+            {
+                "name": "22",
+                "script": "22.sh"
+            },
+            {
+                "name": "23",
+                "script": "23.sh"
+            },
+            {
+                "name": "24",
+                "script": "24.sh"
+            },
+            {
+                "name": "25",
+                "script": "25.sh"
+            },
+            {
+                "name": "26",
+                "script": "26.sh"
+            },
+            {
+                "name": "27",
+                "script": "27.sh"
+            },
+            {
+                "name": "28",
+                "script": "28.sh"
+            },
+            {
+                "name": "29",
+                "script": "29.sh"
+            },
+            {
+                "name": "30",
+                "script": "30.sh"
+            }
+        ]
+    ]
 }
