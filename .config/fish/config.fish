@@ -1,5 +1,5 @@
 setenv EDITOR $HOME/.local/bin/ed
-setenv BROWSER /usr/bin/microsoft-edge-beta
+setenv BROWSER /usr/bin/google-chrome-unstable
 setenv KI_EDITOR_THEME "Github Dark"
 
 
@@ -90,30 +90,20 @@ function fish_prompt
     echo -n (whoami)
     set_color normal
     set_color -d white
-    echo -n " ] ₹ "
+    echo -n " ]"
+    set_color red
+    echo -n (fish_git_prompt)
+    echo -n " "
+    set_color white
+    echo -n (prompt_pwd)
+    set_color normal
+    echo -n " ₹ "
     set_color normal
 end
 
 function fish_right_prompt
     set_color blue
-    #echo -n (date +'%H:%M:%S')
     echo (math "floor($CMD_DURATION / 1000 / 60)")"m"
-    set_color white
-    echo -n " : "
-    set_color red
-    echo -n (fish_git_prompt)
-    echo -n " : "
-    set_color white
-    echo -n (prompt_pwd)
-    set_color white
-    echo -n " : "
-    set_color blue
-    echo -n "( "
-    set_color -o green
-    echo -n (hostname -s)
-    set_color normal
-    set_color blue
-    echo -n " )"
     set_color normal
 end
 

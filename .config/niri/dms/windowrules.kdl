@@ -1,0 +1,5 @@
+layer-rule {
+    match namespace="nirimap"
+    opacity 0.9
+    // Add any layer-specific rules here, such as opacity
+}

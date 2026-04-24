@@ -164,6 +164,7 @@ layout {
         urgent-color   "#cc4444"      // Softer red
     }
     shadow {
+        on
         softness 30
         spread 5
         offset x=0 y=5
@@ -186,13 +187,14 @@ overview {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "nirimap"
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
 hotkey-overlay {
     skip-at-startup
 }
-prefer-no-csd
+//prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
     workspace-switch {
@@ -256,9 +258,13 @@ window-rule {
     match app-id=r#"^galculator$"#
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
     open-floating true
+}
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
 }
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
@@ -276,11 +282,11 @@ window-rule {
 // Open dms windows as floating by default
 window-rule {
     match app-id=r#"org.quickshell$"#
+    match app-id=r#"com.danklinux.dms$"#
     open-floating true
 }
 debug {
     honor-xdg-activation-with-invalid-serial
-    wait-for-frame-completion-before-queueing
 }
 
 // Override to disable super+tab
@@ -300,3 +306,4 @@ include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
+include "dms/windowrules.kdl"
